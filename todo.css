@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #add8e6, #ffffff, #ffb6c1);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 500px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    animation: shadow-cycle 4s infinite alternate;
+    /* Animation with 4 seconds duration, infinite loop, and alternate direction */
+}
+
+@keyframes shadow-cycle {
+    0%,
+    100% {
+        box-shadow: 5px 5px 20px #00ff40, -5px -5px 50px #00b3ff;
+        /* Start and end with original box shadow */
+    }
+    50% {
+        box-shadow: 5px 5px 20px #fffb00, -5px -5px 50px #ff6200;
+        /* Change to red and green */
+    }
+}
+
+.todo-app h2 {
+    color: #0d0065;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeefe;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+input:hover {
+    border: 1px solid none;
+}
+
+button {
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding: 14px 30px;
+    background: rgb(255, 47, 0);
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s;
+    color: #fff;
+    /* Set text color to white */
+}
+
+button:hover {
+    background-color: #060606;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    font-family: Arial, sans-serif;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: rgb(0, 0, 0);
+    background-color: rgba(173, 216, 230, 0.5);
+    /* Red with 30% opacity */
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.svg);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5%;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+
+#datetime {
+    color: red;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    /* Apply the chosen font */
+    /* Adjust font size as needed */
+    font-weight: bold;
+    /* Make the font bold if desired */
+    text-align: center;
+}
+
+.clear-class {
+    position: relative;
+    margin-top: 20px;
+}
+
+.dt {
+    position: absolute;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 130px;
+}
+
+.edit {
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    width: 40px;
+    height: 40px;
+    font-size: 10px;
+    color: #555;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 350px) {
+    .dt {
+        margin-left: 60px;
+    }
+}
+
+@media only screen and (max-width: 464px) {
+    .dt {
+        margin-left: 50px;
+    }
+}
