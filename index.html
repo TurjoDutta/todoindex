@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="todo.css">
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do App<img src="todo1.png"></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">ADD</button>
+            </div>
+
+            <ul id="list-container">
+                <li onclick="editTask(this)">Sample Task</li>
+                <!--    <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>-->
+            </ul>
+            <button class="clear-class" id="clear-button" onclick="clearAllTasks()"><span class="text">Delete All</button>
+            <div class="dt">
+                <p><span id="datetime"></span></p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="todo.js"></script>
+    <script src="time.js"></script>
+
+
+
+</body>
+
+</html>
